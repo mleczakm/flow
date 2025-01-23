@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Flow\ETL\Adapter\Elasticsearch\ElasticsearchPHP;
 
 use Elastic\Elasticsearch\Response\Elasticsearch;
-use Flow\ETL\Row\EntryFactory;
+use Flow\ETL\Row\Factory\EntryFactory;
 use Flow\ETL\{Row, Rows};
 
 final readonly class SearchResults

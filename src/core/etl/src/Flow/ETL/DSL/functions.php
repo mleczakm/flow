@@ -102,10 +102,10 @@ use Flow\ETL\PHP\Type\Native\{ArrayType,
     ResourceType,
     StringType};
 use Flow\ETL\PHP\Type\{Caster, Caster\Options, Type, TypeDetector};
-use Flow\ETL\Row\Factory\NativeEntryFactory;
+use Flow\ETL\Row\Factory\EntryFactory;
 use Flow\ETL\Row\Schema\Formatter\ASCIISchemaFormatter;
 use Flow\ETL\Row\Schema\{Definition, Matcher\EvolvingSchemaMatcher, Matcher\StrictSchemaMatcher, SchemaFormatter};
-use Flow\ETL\Row\{Entry, EntryFactory, EntryReference, Reference, References, Schema};
+use Flow\ETL\Row\{Entry, EntryReference, Reference, References, Schema};
 use Flow\ETL\{Attribute\DocumentationDSL,
     Attribute\DocumentationExample,
     Attribute\Module,
@@ -1074,7 +1074,7 @@ function number_format(ScalarFunction|int|float $value, ScalarFunction|int $deci
  * @return Entry<mixed, mixed>
  */
 #[DocumentationDSL(module: Module::CORE, type: DSLType::DATA_FRAME)]
-function to_entry(string $name, mixed $data, EntryFactory $entryFactory = new NativeEntryFactory()) : Entry
+function to_entry(string $name, mixed $data, EntryFactory $entryFactory = new EntryFactory()) : Entry
 {
     return $entryFactory->create($name, $data);
 }
@@ -1084,7 +1084,7 @@ function to_entry(string $name, mixed $data, EntryFactory $entryFactory = new Na
  * @param array<Partition>|Partitions $partitions
  */
 #[DocumentationDSL(module: Module::CORE, type: DSLType::DATA_FRAME)]
-function array_to_row(array $data, EntryFactory $entryFactory = new NativeEntryFactory(), array|Partitions $partitions = [], ?Schema $schema = null) : Row
+function array_to_row(array $data, EntryFactory $entryFactory = new EntryFactory(), array|Partitions $partitions = [], ?Schema $schema = null) : Row
 {
     $entries = [];
 
@@ -1128,7 +1128,7 @@ function array_to_row(array $data, EntryFactory $entryFactory = new NativeEntryF
  * @param array<Partition>|Partitions $partitions
  */
 #[DocumentationDSL(module: Module::CORE, type: DSLType::DATA_FRAME)]
-function array_to_rows(array $data, EntryFactory $entryFactory = new NativeEntryFactory(), array|Partitions $partitions = [], ?Schema $schema = null) : Rows
+function array_to_rows(array $data, EntryFactory $entryFactory = new EntryFactory(), array|Partitions $partitions = [], ?Schema $schema = null) : Rows
 {
     $partitions = \is_array($partitions) ? new Partitions(...$partitions) : $partitions;
 

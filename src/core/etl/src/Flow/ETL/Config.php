@@ -10,7 +10,7 @@ use Flow\ETL\Config\Sort\SortConfig;
 use Flow\ETL\Filesystem\FilesystemStreams;
 use Flow\ETL\PHP\Type\Caster;
 use Flow\ETL\Pipeline\Optimizer;
-use Flow\ETL\Row\EntryFactory;
+use Flow\ETL\Row\Factory\EntryFactory;
 use Flow\Filesystem\{FilesystemTable};
 use Flow\Serializer\Serializer;
 use Psr\Clock\ClockInterface;
