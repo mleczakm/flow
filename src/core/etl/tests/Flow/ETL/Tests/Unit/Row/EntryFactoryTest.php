@@ -245,6 +245,14 @@ final class EntryFactoryTest extends FlowTestCase
     public function test_json() : void
     {
         self::assertEquals(
+            json_entry('e', '{}'),
+            (new EntryFactory())->create('e', '{}')
+        );
+    }
+
+    public function test_json_object() : void
+    {
+        self::assertEquals(
             json_object_entry('e', ['id' => 1]),
             (new EntryFactory())->create('e', '{"id":1}')
         );
@@ -446,6 +454,14 @@ final class EntryFactoryTest extends FlowTestCase
         self::assertEquals(
             uuid_entry('e', $uuid = '00000000-0000-0000-0000-000000000000'),
             (new EntryFactory())->create('e', $uuid, schema(uuid_schema('e')))
+        );
+    }
+
+    public function test_uuid_type() : void
+    {
+        self::assertEquals(
+            uuid_entry('e', '00000000-0000-0000-0000-000000000000'),
+            (new EntryFactory())->create('e', '00000000-0000-0000-0000-000000000000')
         );
     }
 
