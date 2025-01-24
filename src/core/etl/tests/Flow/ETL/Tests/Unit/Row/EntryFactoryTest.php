@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Tests\Unit\Row\Factory;
+namespace Flow\ETL\Tests\Unit\Row;
 
 use function Flow\ETL\DSL\{bool_entry,
     date_entry,
@@ -23,10 +23,25 @@ use function Flow\ETL\DSL\{bool_entry,
     type_string,
     uuid_entry,
     xml_entry};
-use function Flow\ETL\DSL\{bool_schema, date_schema, datetime_schema, enum_schema, float_schema, integer_schema, json_schema, list_schema, schema, string_schema, structure_entry, time_schema, type_integer, type_structure, uuid_schema, xml_schema};
+use function Flow\ETL\DSL\{bool_schema,
+    date_schema,
+    datetime_schema,
+    enum_schema,
+    float_schema,
+    integer_schema,
+    json_schema,
+    list_schema,
+    schema,
+    string_schema,
+    structure_entry,
+    time_schema,
+    type_integer,
+    type_structure,
+    uuid_schema,
+    xml_schema};
 use Flow\ETL\Exception\{CastingException, SchemaDefinitionNotFoundException};
 use Flow\ETL\Row\Entry\{TimeEntry};
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\ETL\Row\Schema\Metadata;
 use Flow\ETL\Tests\Fixtures\Enum\BackedIntEnum;
 use Flow\ETL\Tests\FlowTestCase;

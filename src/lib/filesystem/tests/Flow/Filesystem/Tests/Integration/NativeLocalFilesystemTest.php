@@ -8,7 +8,7 @@ use function Flow\ETL\DSL\{all, lit, ref};
 use function Flow\Filesystem\DSL\native_local_filesystem;
 use Flow\ETL\Filesystem\{ScalarFunctionFilter};
 use Flow\ETL\PHP\Type\{AutoCaster, Caster};
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\Filesystem\Path\Filter\KeepAll;
 use Flow\Filesystem\{FileStatus, Path, Stream\NativeLocalDestinationStream};
 

@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Flow\ETL\DSL;
 
 use Flow\ETL\ErrorHandler\{IgnoreError, SkipRows, ThrowError};
-use Flow\ETL\Exception\{InvalidArgumentException,
-    RuntimeException,
-    SchemaDefinitionNotFoundException};
+use Flow\ETL\Exception\{InvalidArgumentException, RuntimeException, SchemaDefinitionNotFoundException};
 use Flow\ETL\Extractor\FilesExtractor;
 use Flow\ETL\Filesystem\{SaveMode};
 use Flow\ETL\Function\ArrayExpand\ArrayExpand;
@@ -102,7 +100,7 @@ use Flow\ETL\PHP\Type\Native\{ArrayType,
     ResourceType,
     StringType};
 use Flow\ETL\PHP\Type\{Caster, Caster\Options, Type, TypeDetector};
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\ETL\Row\Schema\Formatter\ASCIISchemaFormatter;
 use Flow\ETL\Row\Schema\{Definition, Matcher\EvolvingSchemaMatcher, Matcher\StrictSchemaMatcher, SchemaFormatter};
 use Flow\ETL\Row\{Entry, EntryReference, Reference, References, Schema};

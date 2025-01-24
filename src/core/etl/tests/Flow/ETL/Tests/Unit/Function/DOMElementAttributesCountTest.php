@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Flow\ETL\Tests\Unit\Function;
 
 use function Flow\ETL\DSL\{ref, row};
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\ETL\Tests\FlowTestCase;
 
 final class DOMElementAttributesCountTest extends FlowTestCase

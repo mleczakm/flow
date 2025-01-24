@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Row\Factory;
+namespace Flow\ETL\Row;
 
 use function Flow\ETL\DSL\{bool_entry,
     date_entry,
@@ -46,7 +46,7 @@ use Flow\ETL\PHP\Type\Native\{ArrayType,
     ObjectType,
     StringType};
 use Flow\ETL\PHP\Type\{Caster, Type, TypeDetector};
-use Flow\ETL\Row\{Entry, Schema, Schema\Definition, Schema\Metadata};
+use Flow\ETL\Row\{Schema\Definition, Schema\Metadata};
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Uid\Uuid;
 

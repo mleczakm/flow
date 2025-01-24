@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Flow\ETL\Tests\Benchmark\EntryFactory;
 
 use function Flow\ETL\DSL\array_to_rows;
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use PhpBench\Attributes\{Groups, ParamProviders};
 
 #[Groups(['building_blocks'])]

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Adapter\Meilisearch\MeilisearchPHP;
 
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\ETL\{Row, Rows};
 use Meilisearch\Search\SearchResult;
 

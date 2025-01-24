@@ -7,7 +7,7 @@ namespace Flow\ETL\Tests\Unit\Function;
 use function Flow\ETL\DSL\row;
 use function Flow\ETL\DSL\{cast, ref};
 use Flow\ETL\PHP\Value\Uuid;
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\ETL\Tests\FlowTestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 

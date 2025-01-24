@@ -6,7 +6,7 @@ namespace Flow\ETL;
 
 use Flow\ETL\ErrorHandler\ThrowError;
 use Flow\ETL\Filesystem\FilesystemStreams;
-use Flow\ETL\Row\Factory\EntryFactory;
+use Flow\ETL\Row\EntryFactory;
 use Flow\Filesystem\{Filesystem, Path, Protocol};
 
 /**
