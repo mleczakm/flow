@@ -5,4 +5,4 @@ interface, below you can find list of things that must be checked.
 
 * Schema 
   * [Definition](../src/Flow/ETL/Row/Schema/Definition.php)
-* [EntryFactory](../src/Flow/ETL/Row/Factory/EntryFactory.php)
+* [EntryFactory](../src/Flow/ETL/Row/EntryFactory.php)
